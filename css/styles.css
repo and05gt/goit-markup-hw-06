@@ -357,11 +357,10 @@ img {
 .section-hero {
   background-color: #2e2f42;
   padding: 72px 0;
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile.png);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mob.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  max-width: 320px;
   margin: 0 auto;
 }
 
@@ -397,9 +396,16 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .section-hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mob@2x.png);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .section-hero {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-tablet.png);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-tab.png);
     max-width: 1158px;
     padding: 112px 0;
   }
@@ -410,20 +416,18 @@ img {
     max-width: 496px;
     margin-bottom: 36px;
   }
-  
-  @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-    .section-hero {
-      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-tablet@2x.png);
-    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+(min-resolution: 192dpi) and (min-width: 768px) {
+  .section-hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-tab@2x.png);
   }
 }
 
 @media screen and (min-width: 1158px) {
   .section-hero {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero.jpg);
-    height: 600px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-desk.png);
     margin-top: 0;
     padding: 188px 0;
     max-width: 1440px;
@@ -439,6 +443,13 @@ img {
   .hero-btn:hover,
   .hero-btn:focus {
     background-color: #404bbf;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1158px),
+(min-resolution: 192dpi) and (min-width: 1158px) {
+  .section-hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-desk@2x.png);
   }
 }
 
